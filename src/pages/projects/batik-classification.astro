@@ -1,12 +1,12 @@
 ---
-import { getEntryBySlug } from "astro:content";
+import { getEntry, render } from "astro:content";
 
-const entry = await getEntryBySlug("projects", "batik-classification");
+const entry = await getEntry("projects", "batik-classification");
+const { Content } = await render(entry);
 ---
 
 <main>
   <h1>{entry.data.title}</h1>
-
   <article>
     <Content />
   </article>

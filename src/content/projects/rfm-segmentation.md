@@ -1,8 +1,10 @@
 ---
 title: RFM Customer Segmentation
+description: Customer segmentation using RFM analysis
+github: https://github.com/MRafli43/
 ---
 
-## Problem
+## Problem  
 
 Understanding customer behavior is critical for designing effective marketing and retention strategies.  
 This project focuses on **segmenting customers based on purchasing behavior** using **RFM analysis (Recency, Frequency, Monetary)** to distinguish active and inactive customers and support data-driven business decisions.
