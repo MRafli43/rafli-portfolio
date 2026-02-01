@@ -1,4 +1,5 @@
 ---
+import Layout from "../layouts/layout.astro";
 import { getEntry, render } from "astro:content";
 
 const entry = await getEntry("experience", "index");
@@ -10,9 +11,106 @@ if (!entry) {
 const { Content } = await render(entry);
 ---
 
-<main>
-  <h1>{entry.data.title}</h1>
+<Layout title="Experience - Muhammad Rafli">
+  <style>
+    .experience-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .experience-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .experience-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .experience-content :global(h3) {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-top: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .experience-content :global(h3:first-of-type) {
+      margin-top: 0;
+    }
+
+    .experience-content :global(p strong) {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .experience-content :global(p) {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .experience-content :global(ul) {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-secondary);
+    }
+
+    .experience-content :global(li) {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+
+    .experience-content :global(hr) {
+      margin: 3rem 0;
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Timeline style */
+    .experience-content :global(h3) {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .experience-content :global(h3::before) {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      width: 12px;
+      height: 12px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+    }
+
+    .experience-item {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .experience-header h1 {
+        font-size: 2rem;
+      }
+
+      .experience-content :global(h3) {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+
   <article>
-    <Content />
+    <div class="experience-header">
+      <h1>{entry.data.title}</h1>
+    </div>
+    
+    <div class="experience-content">
+      <Content />
+    </div>
   </article>
-</main>
+</Layout>

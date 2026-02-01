@@ -1,5 +1,7 @@
 ---
 title: LSTM-based Sentiment Analysis
+description: Sentiment analysis of X tweet using LSTM
+github: https://github.com/MRafli43/
 ---
 
 ## Problem

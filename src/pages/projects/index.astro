@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+---
+
+<main>
+  <h1>Projects</h1>
+
+  {projects.map((project) => (
+    <section>
+      <h2>{project.data.title}</h2>
+      <p>{project.data.description}</p>
+
+      {project.data.github && (
+        <a href={project.data.github} target="_blank">View GitHub</a>
+      )}
+
+      <a href={`/projects/${project.slug}`}>Read Summary</a>
+    </section>
+  ))}
+</main>

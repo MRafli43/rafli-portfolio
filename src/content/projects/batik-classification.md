@@ -1,5 +1,7 @@
 ---
 title: Batik Motif Classification (MobileNetV2)
+description: Image classification system for Indonesian batik motifs using MobileNetV2
+github: https://github.com/MRafli43/
 ---
 
 ## Problem

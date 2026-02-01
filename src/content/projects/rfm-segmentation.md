@@ -1,6 +1,6 @@
 ---
 title: RFM Customer Segmentation
-description: Customer segmentation using RFM analysis
+description: Customer segmentation using RFM analysis and clustering
 github: https://github.com/MRafli43/
 ---
 
