@@ -1,0 +1,18 @@
+---
+import { getCollection } from "astro:content";
+
+const about = await getCollection("about");
+const content = about[0];
+---
+
+<main>
+  <h1>{content.data.title}</h1>
+
+  <img
+    src="/images/profile.jpg"
+    alt="Muhammad Rafli"
+    width="220"
+  />
+
+  <article innerHTML={content.body} />
+</main>
