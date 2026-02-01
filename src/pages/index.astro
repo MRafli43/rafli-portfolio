@@ -1,4 +1,5 @@
 ---
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <main>
@@ -10,24 +11,18 @@
   <section id="projects">
     <h2>Projects</h2>
 
-    <div class="project">
-      <h3>LSTM-based Sentiment Analysis</h3>
-      <p>
-        Built a sentiment analysis model using LSTM on 27,481 social media posts,
-        achieving 93.34% accuracy.
-      </p>
-      <a href="#">View GitHub</a> |
-      <a href="#">Read Summary</a>
-    </div>
+    <ProjectCard
+      title="LSTM-based Sentiment Analysis"
+      description="Built a sentiment analysis model using LSTM on 27,481 social media posts, achieving 93.34% accuracy."
+      github="https://github.com/MRafli43"
+      summary="/projects/lstm-sentiment"
+    />
 
-    <div class="project">
-      <h3>RFM Customer Segmentation</h3>
-      <p>
-        Performed customer segmentation on 50,704 records using RFM analysis
-        to extract actionable insights.
-      </p>
-      <a href="#">View GitHub</a> |
-      <a href="#">Read Summary</a>
-    </div>
+    <ProjectCard
+      title="RFM Customer Segmentation"
+      description="Performed customer segmentation on 50,704 records using RFM analysis to extract actionable insights."
+      github="https://github.com/MRafli43"
+      summary="/projects/rfm-segmentation"
+    />
   </section>
 </main>
