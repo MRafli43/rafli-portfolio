@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { title = "Muhammad Rafli - Portfolio" } = Astro.props;
+const currentPath = Astro.url.pathname;
 ---
 
 <!DOCTYPE html>
@@ -111,11 +112,22 @@ const { title = "Muhammad Rafli - Portfolio" } = Astro.props;
         font-size: 0.9375rem;
         transition: color 0.2s;
         font-weight: 500;
+        position: relative;
       }
 
       .nav-links a:hover,
       .nav-links a.active {
         color: var(--text-primary);
+      }
+
+      .nav-links a.active::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--accent);
       }
 
       /* Main Content */
@@ -225,10 +237,9 @@ const { title = "Muhammad Rafli - Portfolio" } = Astro.props;
       <div class="container">
         <a href="/" class="logo">Muhammad Rafli</a>
         <ul class="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/experience">Experience</a></li>
-          <li><a href="/#projects">Projects</a></li>
+          <li><a href="/projects" class={currentPath.startsWith('/projects') ? 'active' : ''}>Projects</a></li>
+          <li><a href="/experience" class={currentPath === '/experience' ? 'active' : ''}>Experience</a></li>
+          <li><a href="/about" class={currentPath === '/about' ? 'active' : ''}>About</a></li>
         </ul>
       </div>
     </nav>
