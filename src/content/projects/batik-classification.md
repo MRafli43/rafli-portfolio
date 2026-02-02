@@ -1,88 +1,36 @@
 ---
-title: Batik Motif Classification (MobileNetV2)
-description: Image classification system for Indonesian batik motifs using MobileNetV2
+title: Batik Motif Classification
+description: Batik motif identification system using deep learning with systematic hyperparameter tuning and deployment
 github: https://github.com/MRafli43/
 ---
 
-## Problem
+## Overview
+This project focuses on identifying Indonesian batik motifs from images using deep learning.  
+The core objective was to **systematically compare multiple optimizers and hyperparameter tuning methods**, then deploy the best-performing model as a usable identification system.
 
-Batik motifs exhibit complex visual patterns with high inter-class similarity, making image-based classification a challenging task.  
-This project aims to build an accurate and efficient **batik motif classification system** capable of recognizing traditional Indonesian batik patterns from images.
+The final model was trained in **two phases** (transfer learning + fine-tuning) and deployed as an interactive web application.
 
-## Dataset
+---
 
-The dataset consists of **2,462 batik images** categorized into **13 motif classes**, including Kawung, Parang, Mega Mendung, and others.
+# What I Built
+- A batik image classification model using **MobileNetV2** with transfer learning  
+- Comparison of **4 hyperparameter tuning methods** (Grid Search, Random Search, Bayesian Optimization, PSO)  
+- Evaluation of multiple optimizers to find the most stable and accurate configuration  
+- A **two-phase training strategy** to improve generalization and performance  
+- An end-to-end **batik motif identification system** deployed for real-world usage  
 
-The class distribution is relatively balanced, with several dominant classes.
+---
 
-![Batik Class Distribution](/images/projects/batik/distribution.png)
+## Tools & Technologies
 
-Understanding this distribution is crucial to prevent class bias during training and evaluation.
+- **TensorFlow / Keras** — model development and training  
+- **MobileNetV2** — transfer learning backbone  
+- **Python** — data processing and modeling  
+- **Streamlit** — interactive web application for deployment  
 
-## Data Preprocessing
+---
 
-Key preprocessing steps include:
-- Resizing images to **224×224**
-- Pixel normalization
-- Data augmentation (rotation, zoom, shift, horizontal flip)
-- Stratified train-test split to preserve class proportions
-
-These steps improve robustness and generalization to unseen batik patterns.
-
-## Model Architecture
-
-The model is based on **MobileNetV2**, pretrained on ImageNet, leveraging **transfer learning** for efficient feature extraction.
-
-Architecture highlights:
-- MobileNetV2 backbone
-- Global Average Pooling
-- Batch Normalization
-- Dropout regularization
-- Softmax output layer (13 classes)
-
-MobileNetV2 was selected due to its strong performance-to-efficiency ratio, making it suitable for lightweight deployment.
-
-## Training & Hyperparameter Optimization
-
-Training was conducted in two phases:
-1. Training the classification head with frozen backbones
-2. Fine-tuning the last layers for domain adaptation
-
-Multiple optimizers and tuning strategies were evaluated:
-- Adam, Adagrad, RMSprop, SGD
-- Grid Search, Random Search, Bayesian Optimization, Particle Swarm Optimization (PSO)
-
-![Validation Accuracy by Optimizer & Tuning Method](/images/projects/batik/optimizer-tuning.png)
-
-Bayesian Optimization combined with **Adam optimizer** produced the most stable and highest validation accuracy.
-
-## Evaluation & Results
-
-The best-performing model achieved a **test accuracy of ~92%**, demonstrating strong generalization performance.
-
-### Classification Report (Test Set)
-
-The classification report shows balanced precision and recall across most motif classes, with misclassifications primarily occurring between visually similar patterns.
-
-![Classification Report](/images/projects/batik/classification-report.png)
-
-Key observations:
-- High weighted F1-score indicates consistent performance across classes
-- Minority classes are still classified reliably
-- Errors are concentrated in motifs with subtle visual differences
-
-## Deployment
-
-The final model was deployed as an interactive **Streamlit web application**, allowing users to upload batik images and receive real-time predictions with confidence scores.
+## Live Demo:  
+[**SIBIMO**](https://app-app-dkgt3s4zmwem8sfk8flbva.streamlit.app/) - Try ur batik!
 
 ![User Interface](/images/projects/batik/SIBIMO.png)
-
-**Live Demo:**  
-[**SIBIMO**](https://app-app-dkgt3s4zmwem8sfk8flbva.streamlit.app/)
-
-## Key Takeaways
-
-- Transfer learning significantly improves image classification with limited data
-- Hyperparameter optimization has a substantial impact on model performance
-- MobileNetV2 enables efficient and deployable computer vision systems
-- The project demonstrates a complete ML pipeline from data to deployment
