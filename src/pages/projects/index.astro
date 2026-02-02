@@ -21,21 +21,11 @@ const projects = await getCollection("projects");
       }
 
       :root {
-        --bg: #fafafa;
-        --bg-card: #ffffff;
-        --text-primary: #1a1a1a;
-        --text-secondary: #666666;
-        --border: #e0e0e0;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #0a0a0a;
-          --bg-card: #111111;
-          --text-primary: #e5e5e5;
-          --text-secondary: #999999;
-          --border: #2a2a2a;
-        }
+        --bg: #0a0a0a;
+        --bg-card: #111111;
+        --text-primary: #e5e5e5;
+        --text-secondary: #999999;
+        --border: #2a2a2a;
       }
 
       html {
@@ -47,11 +37,11 @@ const projects = await getCollection("projects");
         background: var(--bg);
         color: var(--text-primary);
         line-height: 1.6;
-        padding: 4rem 2rem;
+        padding: 4rem 2rem 6rem 2rem; /* Tambah padding bottom */
       }
 
       .container {
-        max-width: 720px;
+        max-width: 900px;
         margin: 0 auto;
       }
 
@@ -78,20 +68,20 @@ const projects = await getCollection("projects");
       h1 {
         font-size: 2.5rem;
         font-weight: 700;
-        margin-bottom: 3rem;
+        margin-bottom: 3.5rem; /* Lebih besar */
         letter-spacing: -0.02em;
       }
 
       .projects-grid {
         display: grid;
-        gap: 1.5rem;
+        gap: 3.5rem; /* Lebih lega! dari 2.5rem */
       }
 
       .project-card {
         background: var(--bg-card);
         border: 1px solid var(--border);
         border-radius: 8px;
-        padding: 1.75rem;
+        padding: 2.25rem; /* Lebih besar dari 2rem */
         transition: all 0.2s;
       }
 
@@ -102,14 +92,14 @@ const projects = await getCollection("projects");
       .project-card h3 {
         font-size: 1.25rem;
         font-weight: 600;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.875rem; /* Lebih besar */
         color: var(--text-primary);
       }
 
       .project-card p {
         font-size: 0.9375rem;
         color: var(--text-secondary);
-        margin-bottom: 1.25rem;
+        margin-bottom: 1.75rem; /* Lebih besar dari 1.5rem */
         line-height: 1.6;
       }
 
@@ -147,15 +137,20 @@ const projects = await getCollection("projects");
 
       @media (max-width: 768px) {
         body {
-          padding: 2rem 1.5rem;
+          padding: 2rem 1.5rem 4rem 1.5rem;
         }
 
         h1 {
           font-size: 2rem;
+          margin-bottom: 2.5rem;
+        }
+
+        .projects-grid {
+          gap: 2.5rem;
         }
 
         .project-card {
-          padding: 1.5rem;
+          padding: 1.75rem;
         }
 
         .project-card h3 {

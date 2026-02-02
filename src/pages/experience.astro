@@ -14,7 +14,7 @@ const { Content } = await render(entry);
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-case=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Experience - Muhammad Rafli</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <style>
@@ -27,17 +27,10 @@ const { Content } = await render(entry);
       }
 
       :root {
-        --bg: #fafafa;
-        --text-primary: #1a1a1a;
-        --text-secondary: #666666;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #0a0a0a;
-          --text-primary: #e5e5e5;
-          --text-secondary: #999999;
-        }
+        --bg: #0a0a0a;
+        --text-primary: #e5e5e5;
+        --text-secondary: #999999;
+        --border: #2a2a2a;
       }
 
       html {
@@ -53,7 +46,7 @@ const { Content } = await render(entry);
       }
 
       .container {
-        max-width: 720px;
+        max-width: 900px;
         margin: 0 auto;
       }
 
@@ -82,14 +75,15 @@ const { Content } = await render(entry);
         font-weight: 700;
         margin-bottom: 3rem;
         letter-spacing: -0.02em;
+        line-height: 1.2;
       }
 
       article :global(h3) {
         font-size: 1.375rem;
         font-weight: 600;
-        color: var(--text-primary);
         margin-top: 3rem;
         margin-bottom: 0.5rem;
+        color: var(--text-primary);
       }
 
       article :global(h3:first-of-type) {
@@ -97,9 +91,9 @@ const { Content } = await render(entry);
       }
 
       article :global(p) {
-        font-size: 1.0625rem;
-        line-height: 1.75;
-        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
         color: var(--text-secondary);
       }
 
@@ -109,7 +103,7 @@ const { Content } = await render(entry);
       }
 
       article :global(ul) {
-        margin-left: 1.5rem;
+        margin-left: 1.75rem;
         margin-bottom: 1.5rem;
         color: var(--text-secondary);
       }
@@ -117,19 +111,13 @@ const { Content } = await render(entry);
       article :global(li) {
         margin-bottom: 0.5rem;
         line-height: 1.7;
-        font-size: 1.0625rem;
+        font-size: 1rem;
       }
 
       article :global(hr) {
-        margin: 3rem 0;
         border: none;
-        border-top: 1px solid #2a2a2a;
-      }
-
-      @media (prefers-color-scheme: light) {
-        article :global(hr) {
-          border-top-color: #e0e0e0;
-        }
+        border-top: 1px solid var(--border);
+        margin: 3rem 0;
       }
 
       @media (max-width: 768px) {

@@ -5,10 +5,7 @@ github: https://github.com/MRafli43/
 ---
 
 ## Overview
-This project focuses on identifying Indonesian batik motifs from images using deep learning.  
-The core objective was to **systematically compare multiple optimizers and hyperparameter tuning methods**, then deploy the best-performing model as a usable identification system.
-
-The final model was trained in **two phases** (transfer learning + fine-tuning) and deployed as an interactive web application.
+This project focuses on identifying Indonesian batik motifs from images using deep learning. The core objective was to **systematically compare multiple optimizers and hyperparameter tuning methods**, then deploy the best-performing model as a usable identification system. The final model was trained in **two phases** (transfer learning + fine-tuning) and deployed as an interactive web application.
 
 ---
 

@@ -5,8 +5,7 @@ github: https://github.com/MRafli43/
 ---
 
 ## Overview
-This project focuses on classifying sentiment from social media text into **positive, neutral, and negative** categories using deep learning.  
-The main goal is to build a robust sentiment analysis model that can handle noisy and sequential text data.
+This project focuses on classifying sentiment from social media text into **positive, neutral, and negative** categories using deep learning. The main goal is to build a robust sentiment analysis model that can handle noisy and sequential text data.
 
 ---
 

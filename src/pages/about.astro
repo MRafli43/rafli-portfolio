@@ -27,17 +27,9 @@ const { Content } = await render(entry);
       }
 
       :root {
-        --bg: #fafafa;
-        --text-primary: #1a1a1a;
-        --text-secondary: #666666;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #0a0a0a;
-          --text-primary: #e5e5e5;
-          --text-secondary: #999999;
-        }
+        --bg: #0a0a0a;
+        --text-primary: #e5e5e5;
+        --text-secondary: #999999;
       }
 
       html {
@@ -53,7 +45,7 @@ const { Content } = await render(entry);
       }
 
       .container {
-        max-width: 720px;
+        max-width: 900px;
         margin: 0 auto;
       }
 
@@ -82,21 +74,24 @@ const { Content } = await render(entry);
         font-weight: 700;
         margin-bottom: 3rem;
         letter-spacing: -0.02em;
+        line-height: 1.2;
       }
 
+      /* FIX FOTO PROFILE - Lebih besar, tidak kecrop */
       article :global(img) {
-        width: 200px;
-        height: 200px;
+        width: 280px;
+        height: 280px;
         border-radius: 50%;
         object-fit: cover;
+        object-position: center top; /* Fokus ke bagian atas untuk wajah */
         display: block;
         margin: 0 auto 2.5rem;
       }
 
       article :global(p) {
-        font-size: 1.0625rem;
-        line-height: 1.75;
-        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
         color: var(--text-secondary);
       }
 
@@ -115,8 +110,8 @@ const { Content } = await render(entry);
         }
 
         article :global(img) {
-          width: 150px;
-          height: 150px;
+          width: 200px;
+          height: 200px;
         }
 
         article :global(p) {
