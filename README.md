@@ -54,8 +54,16 @@ Personal portfolio website showcasing projects, experience, and background in da
 ├── tsconfig.json
 └── README.md
 
-```txt
+```
 
 ## Getting Started
 
 Follow these steps to run the project locally.
+
+```txt
+
+git clone https://github.com/MRafli43/rafli-portfolio.git
+cd rafli-portfolio
+npm install
+npm run dev
+
