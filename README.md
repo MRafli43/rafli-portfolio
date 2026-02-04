@@ -23,7 +23,6 @@ Personal portfolio website showcasing projects, experience, and background in da
 - **Framework:** Astro
 - **Language:** JavaScript / TypeScript
 - **Styling:** CSS (Astro scoped styles)
-- **Content:** Markdown (`.md`)
 - **Deployment:** Vercel
 
 ---
@@ -54,3 +53,9 @@ Personal portfolio website showcasing projects, experience, and background in da
 ├── package.json
 ├── tsconfig.json
 └── README.md
+
+```txt
+
+## Getting Started
+
+Follow these steps to run the project locally.
