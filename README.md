@@ -1,7 +1,7 @@
 # Portofolio
 
 Live demo:  
-[Porto Rafli](https://mraflisampurna.vercel.app/)
+[To infinity n beyond](https://mraflisampurna.vercel.app/)
 
 A personal portfolio website built to showcase my projects, experience, and background in data science and machine learning. The site is developed using Astro for performance-focused static rendering and deployed on Vercel
 
@@ -100,5 +100,3 @@ npm run dev
 ---
 
 Try to impress the recruiters n get a job
-npm run dev
-
