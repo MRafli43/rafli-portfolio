@@ -19,5 +19,5 @@ This project focuses on classifying sentiment from social media text into **posi
 
 ## Tools & Technologies
 - **Python** – data preprocessing and experimentation  
-- **TensorFlow / Keras** – LSTM model development and training  
+- **Keras** – LSTM model development and training  
 - **Natural Language Processing (NLP)** – text cleaning, tokenization, and sequencing   
