@@ -1,6 +1,7 @@
 ---
 title: Twitter Sentiment Classification with LSTM & CNN
 description: Comparing LSTM and CNN deep learning models to classify sentiment in 27,481 tweets as part of content moderation research on Twitter/X
+github: https://github.com/MRafli43/lstm-sentiment
 ---
 
 <img src="/images/projects/lstm-sentiment/sentiment-hero.png" alt="Twitter sentiment analysis" style="display: block; margin: 1.5rem auto; width: 60%; max-width: 700px; height: auto; border-radius: 12px;" />
