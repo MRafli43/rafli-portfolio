@@ -1,6 +1,7 @@
-[Back](https://mraflisampurna.vercel.app/projects)
-
-# Batik Motif Classification
+---
+title: Batik Motif Classification
+description: Comparing hyperparameter tuning methods and optimizers on MobileNetV2 to classify 13 Indonesian batik motifs, deployed as a Streamlit app
+---
 
 ![SIBIMO Interface](https://mraflisampurna.vercel.app/images/projects/batik/SIBIMO.png)
 
@@ -99,11 +100,3 @@ The final model is wrapped in a Streamlit app (**SIBIMO**) so anyone can upload 
 - **Keras Tuner** — Bayesian Optimization implementation
 - **Python** — data processing and experimentation
 - **Streamlit** — deployment as an interactive web app
-
----
-
-## What I'd Explore Next
-
-- Expand beyond 13 classes / add more images per minor class to strengthen generalization on visually similar motifs
-- Investigate why Betawi, Dayak, and Jlamprang are harder to separate — possibly attention-based visualization (Grad-CAM) to see what the model is actually keying on
-- Compare inference latency across tuning methods, since Bayesian Optimization's better accuracy comes at a noticeably higher search cost than Random Search
