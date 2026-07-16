@@ -4,7 +4,7 @@ description: Comparing hyperparameter tuning methods and optimizers on MobileNet
 github: https://github.com/MRafli43/batik-motif-classification
 ---
 
-![SIBIMO Interface](https://mraflisampurna.vercel.app/images/projects/batik/SIBIMO.png)
+<img src="/images/projects/batik/SIBIMO.png" alt="Customer segmentation illustration" style="display: block; margin: 1.5rem auto; width: 90%; max-width: 700px; height: auto; border-radius: 12px;" />
 
 ## Overview
 
