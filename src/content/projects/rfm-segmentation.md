@@ -1,6 +1,7 @@
 ---
 title: Customer Segmentation Based on RFM
 description: Segmenting 50,000+ e-commerce customers using RFM analysis and unsupervised clustering (K-Means, DBSCAN, Agglomerative, K-Medoids) to identify active vs. inactive customer groups
+github: https://github.com/MRafli43/rfm-customer-segmentation
 ---
 
 <img src="/images/projects/rfm-segmentation/rfm-hero.png" alt="Customer segmentation illustration" style="display: block; margin: 1.5rem auto; width: 70%; max-width: 700px; height: auto; border-radius: 12px;" />
