@@ -1,6 +1,6 @@
 ---
-title: LSTM-based Sentiment Analysis
-description: Sentiment analysis of X tweet using LSTM
+title: Batik Motif Classification
+description: Comparing hyperparameter tuning methods and optimizers on MobileNetV2 to classify 13 Indonesian batik motifs, deployed as a Streamlit app
 github: https://github.com/MRafli43/
 ---
 
